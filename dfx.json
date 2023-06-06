@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "Quewe_backend": {
+      "main": "src/Quewe_backend/main.mo",
+      "type": "motoko"
+    },
+    "Quewe_frontend": {
+      "dependencies": [
+        "Quewe_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/Quewe_frontend/src/index.html"
+      },
+      "source": [
+        "src/Quewe_frontend/assets",
+        "dist/Quewe_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
