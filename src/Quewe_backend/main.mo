@@ -52,8 +52,8 @@ actor {
   };
 
   public func clearCustomers() : async Text {
-    currentTicket -= currentTicket;
-    availableSlot -= (availableSlot - 1);
+    currentTicket := 0;
+    availableSlot := 1;
     queue.clear();
     alreadyAttended.clear();
     return "The day's customer information has been cleaned up";
